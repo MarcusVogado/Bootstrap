@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Bootstrap</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+    <style>
+        body {
+            margin-bottom: 50px;
+        }
+
+        [class^=col] {
+            border: 1px solid red;
+            /* Colocando borda em todas as classes que possuem col*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1 text-center"> Grid-Bootstrap</h1>
+    <p>O Grid Bootstrap é construído com CSS FlexBox. onde cada linha é um container flex e cada
+        coluna, um flex item. A distribuição das colunas dentro da linha
+        por padrão, é na horizontal <code>flex-direction:row</code>. Assim, na teoria podemos adicionar infinitas
+        colunas em uma linha.
+    </p>
+    <h3 class="h3 text-center">Criando o Grid-Bootstrap</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                coluna1
+            </div>
+            <div class="col">
+                coluna2
+            </div>
+            <div class="col">
+                coluna3
+            </div>
+            <div class="col">
+                coluna4
+            </div>
+            <div class="col">
+                coluna5
+            </div>
+        </div>
+    </div>
+
+    <p> Todo grid deve ser marcado dentro de um elemento-pai ao qual se atribui a classe container
+        ou container-fluid. A primeira cria um grid, cuja largura é determinada pelos breakpoins, centralizado na
+        viewport, enquanto a segunda cria um grid cuja largura é igual
+        a largura da viewport. Existem ainda classes cuja sitaxe geral é <code> -{xs|sm|md|lg|xl|xxl}</code> que serão
+        apresentadas mas a frente.
+    </p>
+    <p>
+        O elemento que recebe a <code>class="row"</code> é o contêiner de uma linha do grid e, por padrão um flex
+        contêiner.
+    </p>
+    <p>Já o elemento que recebe a <code>class="col"</code> é uma coluna, que, por estar contida em um flex contêiner, é
+        um flex item
+    </p>
+
+    </p>
+    <p><b>As siglas em inglês nomeiam as faixas de largura em cada breakpoint, conforme é descrito a seguir</b></p>
+    <ul>
+        <li><b>xs</b> <code> &lt;= 576px - largura extra pequena </code> </li>
+        <li><b>sm</b> <code> &gt;= 576px - largura pequena </code></li>
+        <li><b>md</b> <code> &gt;= 768px - largura média</code></li>
+        <li><b>lg</b> <code> &gt;= 992px - largura grande</code></li>
+        <li><b>xl</b> <code> &gt;= 1200px - largura extra grande </code></li>
+        <li><b>xxl</b> <code> &gt;=1400x - largura extra extra grande </code></li>
+    </ul>
+    <hr>
+    <h3 class="h3 text-center">Classes para colunas</h3>
+
+    <p>No exemplo anterior definimos uma classe com o valor col para cada contêiner de cada coluna, que se pose inserir
+        em uma linha <code>div.row</code>
+        Entretanto, existe a possibilidade de inserir em uma linha <code>div.row </code> colunas com larguras iguais ou
+        diferentes usando a classe cuja sintaxe geral é
+        <code> col-n</code> onde n é um número inteiro maior que 1 e menor ou igual a 12.
+    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">4 colunas</div>
+            <div class="col-1">1 coluna</div>
+            <div class="col-5">5 colunas</div>
+            <div class="col-2">2 colunas</div>
+        </div>
+    </div>
+    <p>O número após o prefixo col- define a quantidade de colunas a mesclar para obter uma célula de conteúdo.
+        Podemos notar que dentro da linha <code>div.row</code> a soma dos números constantes do prefixo é igual a 12 4 +
+        1 + 5 + 2.
+        Se esse número for ultrapassado o máximo de 12 colunas havera uma quebra de linha
+    </p>
+    <hr>
+    <h3 class="h3 text-center">Prefixo de classes com breakpoint</h3>
+
+    <p> As classes para colunas possibilitam que se defina a mesclagem de colunas com base nas faixas de largura da
+        viewport(breakpoins), tornando o grid responsivo e adaptável às diferentes larguras de viewport.
+    </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3 col-xl-4"><span></span></div>
+            <div class="col-sm-6 col-md-3 col-xl-1"><span></span></div>
+            <div class="col-sm-6 col-md-3 col-xl-5"><span></span></div>
+            <div class="col-sm-6 col-md-3 col-xl-2"><span></span></div>
+        </div>
+    </div>
+    <hr>
+
+    <h3 class="h3 text-center">Classe auto para colunas</h3>
+    <p> Para definir a largura da coluna com base em seu conteúdo, utilizamos <code>class="col-"prefixo"-auto"</code>
+    </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">Uma coluna</div>
+            <div class="col-md-auto">Coluna com largura determinada pelo conteúdo</div>
+            <div class="col-md-2">Uma coluna</div>
+        </div>
+    </div>
+    <hr>
+    <h3 class="h3 text-center">Gutters</h3>
+    <p> São espaços horizontais entre as colunas em um layout de grid. Eles desempenham um papel crucial no espaçamento
+        e alinhamento adequados dos elementos do layout.</p>
+    <p>São utilizados para criar uma separação visual entra as colunas nas adjacentes, evitando que os elementos se
+        sobreponham uns aos outros. ELes fornecem um spaço consistente entre as colunas,
+        garantindo um design coeso e orfanizado.
+    </p>
+    <p><b>A aplicação do Gutter deverá ser feita no contêiner da linha <code>.row</code>. Se precisar é possivel definir
+            gutter na vertical</b></p>
+    <p>A sintaxe utilizada para definição de Gutters é :</p>
+    <p><code>.gx{número} </code> e <code>.gy-{número}</code> para gutter horizontal e vertical respectivamente, sendo o
+        placeholder{número} um número de 0 a 5 que define Gutters de 0.25rem, 0.5rem, 1rem, 1.5rem e 3rem.
+    </p>
+
+
+    <div class="container">
+        <div class="row row-cols-sm-2" style="margin-top: 10px;">
+            <div class="col">
+                <div>
+                    card 1
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    card 2
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    card 3
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    card 4
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    card 5
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="h3 text-center">Linhas aninhadas</h3>
+    <p> Para aninha linhas(inserir linha dentro de linha) insira o contêiner com a classe row dentro de um cont~einer
+        com a classe row.</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                3 colunas
+            </div>
+            <div class="col-9">
+                9 colunas
+                <div class="row">
+                    <div class="col-4">
+                        4 colunas
+                    </div>
+                    <div class="col-8">
+                        8 colunas
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="h3 text-center">Classes para o contêiner do grid</h3>
+    <p>Anteriormente utilizamos apenas no elemento-pai do grid, a largura desejada eram determinada pelos breakpoins do
+        framework, e também vimos o <code>class="container-fluid"</code></p>
+    <ul>
+        <li><code>.container</code></li>
+        <li><code>.container-sm</code></li>
+        <li><code>.container-md</code></li>
+        <li><code>.container-lg</code></li>
+        <li><code>.container-xl</code></li>
+        <li><code>.container-xxl</code></li>
+        <li><code>.container-fluid</code></li>
+    </ul>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                coluna
+            </div>
+            <div class="col-md-6">
+                coluna
+            </div>
+        </div>
+    </div>
+    <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

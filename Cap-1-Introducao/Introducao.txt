@@ -1,0 +1,60 @@
+                                                         BOOTSTRAP
+É o mais popular framework JavaScript ,HTML e CSS para desenvolvimento de sistes e aplicações web responsivas e alinhadas
+com a filosofia MOBILE FIRST.
+Foi criado para tornar o desenvolvimento frontend muito mais rápido e fácil e é indicado para desenvolvedores de todos
+os níveis de conhecimento.
+
+                                                        HISTÓRICO
+
+Lançado no dia 19 de agosto de 2011, por Mark Otto, um desenvolvedor do Twitter, junto com Jacob Thornton fizeram o lançamento do BOOTSTRAP
+através de um artigo publicado no blog do Twitter.
+
+Foi desenvolvido para resolver os problemas de inconsistências causadas pelas diferentes bibliotecas no Twitter, foi apresentada na primeira Twitter Hackweek realizada
+na semana de 22 a 29 de outubro de 2011, onde saiu com sua primeira versão estável e pronta para uso.
+
+O coração do BOOTSTRAP é o CSS criado com SASS, um pré-processador destinado a gerar folhas de estilos CSS, este processador oferece mais flexibilidade e poder 
+do que as folhas convencionais de estilos, ou que não são processadas.
+
+O resultado disso tudo é uma folha de estilos pura, que basta ser lincada ao documento para ser implementada.
+
+                                                        INTEGRAÇÃO
+CDN (Content Delivery Network) Rede de Distribuição de Conteúdo.
+
+Utilizando o CDN temos um aumento de desempenho, pos possibilita ao dispositivo do usuário um carregamento rápido dos contúdos requisitados.
+Para seu funcionamento o BOOTSTRAP precisa apenas de um arquivo CSS e outro JavaScript, basta adicionar o link de CSS na seção head e o link de JavaScript ao final do body.
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+DOWNLOAD
+
+Para download do BOOTSTRAP precisamos acessar sua página oficial: https://getbootstrap.com/docs/5.3/getting-started/download/
+Após o donwload precisamos extrair suas pastas e adiciona-las ao nosso projeto.
+
+Os arquivos a serem importados para dentro do nosso HTML são:
+
+CSS - css/bootstrap.css
+JavaScript - js/bootstrap.bundle.js
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>    
+    <script src="../bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

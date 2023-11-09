@@ -1,0 +1,25 @@
+body {
+    background-color: #0f0f0f;
+}
+
+[class ^=col] {
+    border: 1px solid red;
+}
+
+.header__container {
+    height: 80px;
+    background-color: aqua;
+}
+.nav__container{
+    height: 100vh;
+    background-color: aquamarine;
+
+}
+.main__container{
+    height: 100vh;
+    background-color: azure;
+}
+.footer__container{
+    height: 80px;
+    background-color: aliceblue;
+}
