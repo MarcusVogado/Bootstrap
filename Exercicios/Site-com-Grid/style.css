@@ -7,9 +7,20 @@ body {
 }
 
 .header__container {
+    display: flex; 
+    justify-content:space-between;   
     height: 80px;
     background-color: aqua;
 }
+.logo__image{
+    display: flex;
+    align-items: center;    
+}
+.tex-content{
+    display: flex;
+    align-items: center;
+}
+
 .nav__container{
     height: 100vh;
     background-color: aquamarine;
@@ -22,4 +33,22 @@ body {
 .footer__container{
     height: 80px;
     background-color: aliceblue;
+}
+
+.menu-list{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 10px;
+    flex-wrap: wrap;   
+    list-style: none;
+}
+.menu-list li>a{
+    border: 0.09rem solid #cccc;
+    padding: 0px 16px;
+    text-decoration: none;    
+}
+.menu-list li>a:hover{
+    border: 0.1rem solid #ffff;
 }

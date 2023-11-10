@@ -15,6 +15,17 @@
             border: 1px solid red;
             /* Colocando borda em todas as classes que possuem col*/
         }
+
+        .align-test {
+            display: flex;
+            height: 200px;
+            background-color: aquamarine;
+            margin-bottom: 5px;
+        }
+
+        .container {
+            background-color: antiquewhite;
+        }
     </style>
 </head>
 
@@ -136,7 +147,7 @@
 
 
     <div class="container">
-        <div class="row row-cols-sm-2" style="margin-top: 10px;">
+        <div class="row row-cols-sm-2 gy-3" style="margin-top: 10px;">
             <div class="col">
                 <div>
                     card 1
@@ -164,7 +175,7 @@
             </div>
         </div>
     </div>
-
+    <hr>
     <h3 class="h3 text-center">Linhas aninhadas</h3>
     <p> Para aninha linhas(inserir linha dentro de linha) insira o contêiner com a classe row dentro de um cont~einer
         com a classe row.</p>
@@ -187,6 +198,7 @@
             </div>
         </div>
     </div>
+    <hr>
     <h3 class="h3 text-center">Classes para o contêiner do grid</h3>
     <p>Anteriormente utilizamos apenas no elemento-pai do grid, a largura desejada eram determinada pelos breakpoins do
         framework, e também vimos o <code>class="container-fluid"</code></p>
@@ -210,6 +222,167 @@
             </div>
         </div>
     </div>
+    <hr>
+    <h3 class="h3 text-center">Alinhamento vertical de linhas</h3>
+    <p>Por padrão, os contêinres das colunas <code>div.row</code> que definem as linhas do grid são contêinres do tipo
+        flex e podem ser alinhas na vertical com o uso do FlexBox, align-items.
+        Possuindo três classes para possionamento que são elas: align-items-start, align-items-center e align-items-end
+    </p>
+    <div class="container align-test">
+        <div class="row  align-items-start">
+            <div class="col">
+                coluna 1
+            </div>
+            <div class="col">
+                coluna 2
+            </div>
+            <div class="col">
+                coluna 3
+            </div>
+        </div>
+    </div>
+    <div class="container align-test">
+        <div class="row align-items-center">
+            <div class="col">
+                coluna 1
+            </div>
+            <div class="col">
+                coluna 2
+            </div>
+            <div class="col">
+                coluna 3
+            </div>
+        </div>
+    </div>
+    <div class="container align-test">
+        <div class="row align-items-end">
+            <div class="col">
+                coluna 1
+            </div>
+            <div class="col">
+                coluna 2
+            </div>
+            <div class="col">
+                coluna 3
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h3 class="h3 text-center">Alinhamento Vertical de colunas</h3>
+    <p>Sabendo que as colunas são flex itens, elas podem ser alinhadas na vertical com o uso das propriedades:
+        <code>align-self-start, align-self-center e align-self-end</code>.
+    </p>
+    <div class="container align-test">
+        <div class="row">
+            <div class="col align-self-start">
+                coluna 1
+            </div>
+            <div class="col align-self-center">
+                coluna 2
+            </div>
+            <div class="col align-self-end">
+                coluna 3
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h3 class="h3 text-center">Alinhamento horizontal de colunas</h3>
+    <p>Sabendo que uma linha do grid pode conter até 12 colunas sem que haja quebra de linha. Caso contenha menos de 12
+        colunas o grid não oculpa toda a largura prevista para a viewport, e por padrão as colunas em falta deixarão um
+        espaço vazio à direita</p>
+    <p>São previstas cinco classes para aplicar o alinmhamento horizontal de colunas: <code>
+        justify-content-start, justify-content-center, justify-content-end, justify-content-around,
+        justify-content-between e justify-content-evenly.
+    </code>
+
+    </p>
+    <p class="text-center">start</p>
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <p class="text-center">center</p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <p class="text-center">end</p>
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <p class="text-center">around</p>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <p class="text-center">between</p>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <p class="text-center">evenly</p>
+    <div class="container">
+        <div class="row justify-content-evenly">
+            <div class="col-4">
+                coluna 1
+            </div>
+            <div class="col-4">
+                coluna 2
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <h3 class="text-center h3">Deslocamento de colunas com uso de classes</h3>
+    <p>Coluna ou conjunto de colunas que não ocupem toda a largura da linha podem ser deslocadas para a direta com o uso
+        de classes cuja a sintaxe geral é <code>offset-{xs|sm|md|lg|xl|xxl}-{[1-11]}</code></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 offset-2">
+                   primeira coluna
+                </div>
+                <div class="col-4 offset-3">
+                    segunda coluna
+                </div>    
+            </div>
+        </div>
+
     <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 
