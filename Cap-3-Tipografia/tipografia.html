@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
+    <style>
+        body {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center">TIPOGRAFIA</h1>
+    <h3 class="text-center">Introdução</h3>
+    Vamos estudar a estilização padrão do Bootstrap para classes tipográficas como
+    <code> .h1, .h2, .p, .lead,</code> para classes de estilização de texto como negrito, itálico, sublinhado e tachado,
+    também para classes de alinhamento de texto e espaçamento entre linhas e letras
+    <hr>
+    <h3 class="h3 text-center">Família de fontes </h3>
+    <p>Por padrão o bootstrap define para o element body um conjunto de fontes conhecido como
+        <code> native font stack</code>
+        ou <code>system font stack</code>. Trata-se de uma lista que já vem configurada com valores para a propriedade
+        font-family, nesta configuração comtempla pelomenos uma fonte compatível com o sistema operacional que o usuário
+        está utilizando.
+        Esta configuração pode ser encontrada no arquivo bootstrap.css nas primeiras linhas do código, ela é definida
+        como uma variável CSS pelo seletor <code>:root{--bs-font-sans-serif:}</code>
+    </p>
+    <p>Podemos importar novas vontes do Google Fonts por exemplo e fazer a configuração normalmente criando uma folha de
+        estilo customizada com regra CSS que sobrescreva a regra padrão.</p>
+    <hr>
+    <h3 class="h3 text-center">Estilização dos elementos h1 até o h6 e p </h3>
+    <p>Os tamanhos podroes das fontes são:</p>
+    <ul>
+        <li>h-1, .h-1{font-size: 2.5rem}</li>
+        <li>h-2, .h-2{font-size: 2rem}</li>
+        <li>h-3, .h-3{font-size: 1.75rem}</li>
+        <li>h-4, .h-4{font-size: 1.5rem}</li>
+        <li>h-5, .h-5{font-size: 1.25rem}</li>
+        <li>h-6, .h-6{font-size: 1.rem}</li>
+    </ul>
+    <p>Por padrão a propriedade <code>font-weight</code> para esses elementos tem o valor 500(que seria um semi-bold) e
+        para <code>line-height</code> tem o valor 1.2</p>
+    <p>Ao utilizar as classes que o bootstrap disponibiliza para elementos h1 até o h6, podemos utilizar essas classes
+        em qualquer elemento e ela tera o mesmo comportamento de um h1 por exemplo:
+        <code> &lt;span class="h1" /&gt; Texto do elemento span &lt;/span&gt; </code>
+    </p>
+    <span class="h1">Este é um elemento span utilizando a classe <code>.h1</code></span>
+
+    <p>Também temos a classe <code>.display-</code> que é utilizada para estilizar cabeçalhos com a propriedade
+        <code>font-size</code> aumentada e possui seis níveis, de <code>.display-1</code> até <code>.display-6</code>
+    </p>
+    <p class="display-4">Aqui um elemento <code>&lt;p&gt;</code> com a classe display-4</p>
+
+    <hr>
+    <h3 class="text-center">Classes para textos</h3>
+    <p>Precisamos resaltar que ao utilizar essas classes de forma excessiva pode resultar em um código extremamente
+        <b>poluído e difícil de manter.</b> É recomendado utilizar essas classes com moderação para sempre buscar o
+        equilíbrio.
+    </p>
+
+    <h4>Alinhamento</h4>
+    <p>As classes <code>.text-start, .text-center e .text-end</code> servem para alinha os elementos dentro do seu
+        contêiner. Podemos atrelar o alinhamento dos texto à largura da viewport usando uma sintaxe modifica para essas
+        propriedades, que consiste em acrescentar a sigla do breakpoint. por exemplo:
+        <code>.text-md-center, .text-lg-end</code> etc.
+    </p>
+
+    <p>Exemplo quero um texto ao centro quando a minha tela estiver média e alinhado a esquerda se a tela for pequena
+    </p>
+    <p class="text-md-center text-xs-start"><b>Este texto se movimenta de acordo com o tamanho da tela</b></p>
+    <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
+    
+</body>
+
+</html>
